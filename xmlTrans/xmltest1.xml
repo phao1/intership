@@ -1,0 +1,33 @@
+<?xml version="1.0" ?> 
+<searchRetrieveResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd" xmlns="http://www.loc.gov/zing/srw/">
+  <records xmlns:ns1="http://www.loc.gov/zing/srw/">
+    <record>
+      <recordData>
+        <record xmlns="">
+          <datafield tag="000">
+            <subfield code="a">123</subfield>
+            <subfield code="b">456</subfield>
+          </datafield>
+          <datafield tag="001">
+            <subfield code="a">789</subfield>
+            <subfield code="b">987</subfield>
+          </datafield>
+        </record>
+      </recordData>
+    </record>
+    <record>
+      <recordData>
+        <record xmlns="">
+          <datafield tag="000">
+            <subfield code="a">123</subfield>
+            <subfield code="b">456</subfield>
+          </datafield>
+          <datafield tag="001">
+            <subfield code="a">789</subfield>
+            <subfield code="b">987</subfield>
+          </datafield>
+        </record>
+      </recordData>
+    </record>
+  </records>
+</searchRetrieveResponse>
