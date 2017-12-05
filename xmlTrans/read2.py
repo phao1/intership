@@ -1,7 +1,6 @@
-import urllib, urllib2
-import global_1
 from lxml import etree, objectify
 from lxml import etree
+
 def read(fileName):
     tree = etree.parse(fileName)
     list_data = []
@@ -25,6 +24,8 @@ def read(fileName):
             list_data.append(box.text)
     #print list_data
     return (list_data,list_cycle)
+
+
 def add(width, height, depth,list_data,list_cycle,file_sequence,data_sequence):
     E = objectify.ElementMaker(annotate=False)
     anno_tree = E.annotation(
@@ -61,6 +62,7 @@ def add(width, height, depth,list_data,list_cycle,file_sequence,data_sequence):
     etree.ElementTree(anno_tree).write(filename, pretty_print=True)
     return data_sequence
 
+
 def addObject(xmin,ymin,xmax,ymax, E,anno_tree):
     E2 = objectify.ElementMaker(annotate=False)
     anno_tree2 = E2.object(
@@ -76,7 +78,6 @@ def addObject(xmin,ymin,xmax,ymax, E,anno_tree):
     anno_tree.append(anno_tree2)
 
 def main(fileName):
-
     list_data, list_cycle=read(fileName)
     file_sequence=0
     j=0
@@ -84,6 +85,8 @@ def main(fileName):
     for picture in list_cycle:
         data_sequence=add(960, 540, 3, list_data, list_cycle,file_sequence,data_sequence)
         file_sequence=file_sequence+1
+
+
 
 fileName = "D:\software\work\dataset\DETRAC-Train-Annotations-XML\DETRAC-Train-Annotations-XML\MVI_20011.xml"
 #D:\software\work\dataset\DETRAC-Train-Annotations-XML\DETRAC-Train-Annotations-XML\MVI_20011.xml
